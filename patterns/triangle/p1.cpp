@@ -3,21 +3,21 @@ using namespace std;
 
 int main(){
     int n;
-    cin>> n;
+    cin >> n;
 
     int i = 1;
-    while (i<=n){
-    
+    char ch = 'A';
+    while (i<=n)
+    {
         int j = 1;
-        while (j<=n)
+        while (j<=i)
         {
-            char ch = 'A' + i + j - 2;
-            cout<<ch<<" ";
+            cout << ch << " ";
             j++;
         }
-
-        cout<< endl;
+        cout << endl;
+        ch++;
         i++;
-        
     }
+    
 }
