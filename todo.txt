@@ -1,0 +1,9 @@
+AP ka function
+nuber of set bits in a and b
+fibonacci ka function
+
+find unique in array
+find duplicate in array
+array intersection
+pair sum
+triplet sum
