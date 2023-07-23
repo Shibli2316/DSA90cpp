@@ -2,3 +2,5 @@
 array intersection
 pair sum
 triplet sum
+unique number of occurance
+Duplicates in an array
