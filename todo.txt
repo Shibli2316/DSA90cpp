@@ -4,3 +4,5 @@ pair sum
 triplet sum
 unique number of occurance
 Duplicates in an array
+
+0-1-2 (hw)
