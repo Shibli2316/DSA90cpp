@@ -6,3 +6,10 @@ unique number of occurance
 Duplicates in an array
 
 0-1-2 (hw)
+
+flowchart of selection sort and bubble sort
+stable or unstable algorithm
+
+what is inplace sort
+
+what is meant by adaptable algorithm
