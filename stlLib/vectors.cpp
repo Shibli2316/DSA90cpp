@@ -6,8 +6,14 @@ using namespace std;
 int main(){
     vector<int> v;
     vector<int> a(5,1);
+    vector<int> last(a);
     cout << "print a: "<<endl;
     for(int i:a){
+        cout << i << " ";
+    }
+    cout << endl;
+    cout << "print last: "<<endl;
+    for(int i:a=last){
         cout << i << " ";
     }
     cout << endl;
