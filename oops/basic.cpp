@@ -40,6 +40,7 @@ int main(){
     a.setHealth(80);
     a.setLevel('B');
     cout << "Level is: " << a.level << endl;
+    cout << "Level is: " << a.getLevel() << endl;
     cout <<"Health is: " << a.getHealth() <<endl;
 
 
