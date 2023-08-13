@@ -4,14 +4,13 @@
 using namespace std;
 
 class Hero{
-    // properties
-    // public:
     private:
     int health;
 
     public:
     char* name;
     char level;
+    static int timeToComplete;
 
     Hero(){
         cout << "constructor called" << endl;
@@ -20,8 +19,6 @@ class Hero{
 
     // Parameterised connstructor
     Hero(int health){
-        // "this" acts like a pointer to the object that is accessing the class at the moment
-        // cout << "This: " << this << endl;
         this -> health = health;
         name = new char[100];
     }
@@ -31,15 +28,6 @@ class Hero{
         this -> level = level;
         name = new char[100];
     }
-
-    // Copy constructor
-    // Hero(Hero& temp){
-    //     cout <<"Apna constructor" << endl;
-    //     this->health = temp.health;
-    //     this->level = temp.level;
-    //     name = new char[100];
-    //     strcpy(name, temp.name);
-    // }
 
     // Deep copy
     Hero(Hero& temp){
@@ -73,31 +61,39 @@ class Hero{
     void setName(char name[]){
         strcpy(this->name, name);
     }
+
+    static int random(){
+        return timeToComplete;
+    }
 };
 
+int Hero::timeToComplete = 5;
+
 int main(){
+    cout <<Hero::timeToComplete << endl;
 
-    Hero hero1;
-    hero1.setHealth(12);
-    hero1.setLevel('D');
-    char name[] = "Babbar";
-    hero1.setName(name);
+    cout <<"Calling it from a function: " << endl;
 
-    hero1.print();
+    cout <<Hero::random() << endl;
 
-    // using default copy constructor
+    Hero a;
+    cout <<a.timeToComplete << endl; //not recomended to do so
 
-    Hero hero2(hero1);
-    hero2.print();
-
-    hero1.name[0] = 'G';
-    hero1.print();
-
-    hero2.print();
-    delete[] hero1.name;
+    Hero b;
+    b.timeToComplete = 10;
+    cout <<a.timeToComplete << endl;
+    cout <<b.timeToComplete << endl;
 
 }
 
+// Static belongs to the class and does not need an object to be called
 
-// Default copy constructor makes shallow copy
-// If we use deep copy new address is returned and in shallo copy the same address is returned giving a problrm.
+// initialise it outside the classs
+// to initialise use this syntax 
+// datatype className :: fieldName = value;
+// the two dots are called scope resolution operator
+
+// static function
+// Does not need the creation of an obbject
+// this keyword is not there as 'this' keyword is a pointer to current object and since there is no object there is no this keyword
+// Static function can only access static members

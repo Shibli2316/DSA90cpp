@@ -4,8 +4,6 @@
 using namespace std;
 
 class Hero{
-    // properties
-    // public:
     private:
     int health;
 
@@ -20,8 +18,6 @@ class Hero{
 
     // Parameterised connstructor
     Hero(int health){
-        // "this" acts like a pointer to the object that is accessing the class at the moment
-        // cout << "This: " << this << endl;
         this -> health = health;
         name = new char[100];
     }
@@ -83,21 +79,17 @@ int main(){
     char name[] = "Babbar";
     hero1.setName(name);
 
-    hero1.print();
-
-    // using default copy constructor
-
     Hero hero2(hero1);
-    hero2.print();
 
     hero1.name[0] = 'G';
     hero1.print();
 
     hero2.print();
+    hero1=hero2;
+
+    hero1.print();
+    hero2.print();
+    
     delete[] hero1.name;
 
 }
-
-
-// Default copy constructor makes shallow copy
-// If we use deep copy new address is returned and in shallo copy the same address is returned giving a problrm.
