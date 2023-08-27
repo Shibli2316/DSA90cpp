@@ -10,7 +10,7 @@ int main(){
 
     cout << "Before erase: "<< endl;
     for(auto i:m){
-        cout << i.second << endl;
+        cout << i.second << i.first << endl;
     }
     cout << endl;
 
