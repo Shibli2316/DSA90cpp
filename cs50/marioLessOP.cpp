@@ -1,26 +1,26 @@
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-int main() {
-    int userInput;
+// int main() {
+//     int userInput;
     
-    do {
-        cout << "Input a number between 1-8: ";
-        cin >> userInput;
-    } while (userInput > 8 || userInput < 1);
+//     do {
+//         cout << "Input a number between 1-8: ";
+//         cin >> userInput;
+//     } while (userInput > 8 || userInput < 1);
 
-    cout << "Height : " << userInput << endl;
+//     cout << "Height : " << userInput << endl;
 
-    for (int i = 1; i <= userInput; i++) {
-        cout << string(userInput - i, ' '); // Print leading spaces
-        cout << string(i, '#'); // Print left hashtags
-        cout << "  "; // Print gap between halves
-        cout << string(i, '#'); // Print right hashtags
-        cout << endl;
-    }
+//     for (int i = 1; i <= userInput; i++) {
+//         cout << string(userInput - i, ' '); // Print leading spaces
+//         cout << string(i, '#'); // Print left hashtags
+//         cout << "  "; // Print gap between halves
+//         cout << string(i, '#'); // Print right hashtags
+//         cout << endl;
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
 
 
 #include <iostream>
