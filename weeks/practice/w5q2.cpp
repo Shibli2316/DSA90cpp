@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+void entryArray(int arr[], int size){
+    for(int i = 0; i < size; i++){
+        cout <<"Enter the number for " << i+1 << " place: " << endl;
+        cin >> arr[i];
+    }
+}
+
+void printArray(int arr[], int size){
+    cout << "[";
+    for(int i = 0; i<size; i++){
+        if(i==size-1){
+            cout << arr[i];
+        }else{
+            cout << arr[i] << ", ";
+        }
+    }
+    cout << "]";
+}
+
+void sumArray(int arr[], int size){
+    int sum=0;
+    for(int i = 0; i < size; i++){
+        sum+=arr[i];
+    }
+    cout << "Sum of array is: " << sum << endl;
+}
+
+int main(){
+    int arr[100];
+    int size;
+    cout << "Enter the size of the array: " << endl;
+    cin >> size;
+    entryArray(arr, size);
+    cout << "The array you entered is as follows: " << endl;
+    printArray(arr, size);
+    cout << endl;
+    sumArray(arr, size);
+}
